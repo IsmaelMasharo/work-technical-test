@@ -15,7 +15,7 @@ Create an account:
             "password": "password"
             }
 
-Logging:
+Loguing:
 - endpoint: POST http://127.0.0.1:8000/user/login
 - payload: {
             "username": "username", 
@@ -47,7 +47,7 @@ Retrieve specific note:
             "Authorization": "Bearer jwtoken"
             }
 
-JWT its being sent at loguing. Should be sent in the header for user authentication.
+JWT its being sent at loguing. Should be sent back in the header for user authentication.
 
 Run server side:
 - cd server
