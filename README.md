@@ -1,13 +1,13 @@
 
-REST API para notas.
+# REST API for personal notes.
 
-La aplicacion se corre localmente. Los endpoints son:
+The application running locally has the following endpoints:
 http://127.0.0.1:8000/user
 http://127.0.0.1:8000/notes
 
-Las notas solo pueden ser accedidas por los usuarios que las crearon.
+Notes can only be seen by the account owner.
 
-Crear una cuenta:
+Create an account:
 - endpoint: POST http://127.0.0.1:8000/user/signup
 - payload: {
             "username": "username", 
@@ -15,7 +15,7 @@ Crear una cuenta:
             "password": "password"
             }
 
-Loguearse:
+Logging:
 - endpoint: POST http://127.0.0.1:8000/user/login
 - payload: {
             "username": "username", 
@@ -23,7 +23,7 @@ Loguearse:
             }
 - return: jwtoken
 
-Crear una nota:
+Create a personal note:
 - endpoint: POST http://127.0.0.1:8000/notes
 - header: {
             "Content-Type" : "application/json"
@@ -33,27 +33,26 @@ Crear una nota:
             "content": "content", 
             }
 
-Pedir todas las notas:
+Retrieve all personal notes:
 - endpoint: GET http://127.0.0.1:8000/notes
 - header: {
             "Content-Type" : "application/json"
             "Authorization": "Bearer jwtoken"
             }
 
-Pedir una nota:
+Retrieve specific note:
 - endpoint: GET http://127.0.0.1:8000/notes
 - header: {
             "Content-Type" : "application/json"
             "Authorization": "Bearer jwtoken"
             }
 
-El jwtoken se envia cuando uno se loguea. 
-Para pedir notas se envia el jwtoken en el header y con esta se obtiene el userID.
+JWT its being sent at loguing. Should be sent in the header for user authentication.
 
-Iniciar el servidor:
+Run server side:
 - cd server
 - python server.py
 
-Iniciar el cliente:
+Run client side:
 - cd client
 - python client.py
