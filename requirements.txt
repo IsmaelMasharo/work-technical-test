@@ -16,5 +16,5 @@ Pygments==2.2.0
 PyJWT==1.5.2
 six==1.11.0
 urwid==2.0.1
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 WTForms==2.2.1
